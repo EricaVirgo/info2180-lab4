@@ -38,6 +38,12 @@ window.onload = function(){
 	//	boundary1.classList.add("youlose");
 	//})
 
+
+	start.addEventListener("click", function(){
+		location.reload();
+	})
+
+
 	end.addEventListener("mouseover", function(e){
 		if ( touchedBoundary  == false){
 			alert( "You win!" );
