@@ -14,7 +14,6 @@ window.onload = function(){
 	function touched(){
 		for ( b= 0; b<boundaries.length ; b++){ 
 			if (boundaries[b].classList.contains("youlose")){
-				status = document.getElementById("status").innerHTML = "You have Lost"
 				touchedBoundary = true;
 			} 
 		}
@@ -25,11 +24,13 @@ window.onload = function(){
 			boundaries[b].addEventListener("mouseover", function(element){
 				for ( b=0; b<boundaries.length ; b++)
 				boundaries[b].classList.add("youlose");
-				status = document.getElementById("status").innerHTML = "You have Lost"
+				status = document.getElementById("status").innerHTML = "You have Lost. Click S to start over."
 
 			})
 		}
 	}
+
+
 	instant();
 	touched();
 //Exercise 1 - unnecessary
@@ -46,7 +47,7 @@ window.onload = function(){
 
 	end.addEventListener("mouseover", function(e){
 		if ( touchedBoundary  == false){
-			alert( "You win!" );
+			status = document.getElementById("status").innerHTML = "You Win !!"
 		}
 	})
 }
